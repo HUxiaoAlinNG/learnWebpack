@@ -1,0 +1,45 @@
+Arguments: 
+  /Users/huangxl/.nvm/versions/node/v12.14.0/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/huangxl/.nvm/versions/node/v12.14.0/bin:/usr/local/opt/go@1.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/huangxl/.sdkman/candidates/groovy/current/bin
+
+Yarn version: 
+  1.21.1
+
+Node version: 
+  12.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/huangxl/codes/hxl/learnWebpack/package.json: Unexpected token } in JSON at position 298
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "learnwebpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "webpack-cli": "3.3.11",
+      "html-webpack-plugin": "^4.3.0",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

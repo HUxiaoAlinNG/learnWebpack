@@ -1,0 +1,17 @@
+{
+  "name": "learnwebpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "prod-run": "http-server -p 9000 "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack-cli": "3.3.11",
+    "webpack": "^4.43.0",
+    "http-server": "^0.12.3"
+  }
+}

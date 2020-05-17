@@ -1,0 +1,2 @@
+const es6 = require("./export-es6");
+console.log("===commonjs导出es6===", es6, es6.a, es6.b); // Module:{ b: "es6_b", default: "es6_a", Symbol(Symbol.toStringTag): "Module" ,__esModule: true } undefined es6_b
