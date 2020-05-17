@@ -1,6 +1,6 @@
 ## 同步加载
 
-#### 打包文件分析[basic-bundle.js](../dist/basic-bundle.js)
+#### 打包文件分析[basic-sync-bundle.js](../dist/basic-sync-bundle.js)
 ```js
 (function (modules) {
   // The module cache
