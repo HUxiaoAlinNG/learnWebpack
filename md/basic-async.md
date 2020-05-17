@@ -280,7 +280,7 @@ exports.b = "commonjs_b";
           .then((commonjs) => {
             console.log("===异步导出commonjs===", commonjs, commonjs.a, commonjs.b);
           });
-      })
+      },10000)
     })
   }
 ```
