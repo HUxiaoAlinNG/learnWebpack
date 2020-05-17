@@ -1,4 +1,4 @@
-## 异步加载
+## 2 异步加载
 
 #### 打包文件分析[basic-async-bundle.js](../dist/basic-async-bundle.js)
 ```js
@@ -255,8 +255,8 @@ module.exports = {
 }
 ```
 
-#### 2. 异步加载模块
-##### 2.1 [async-import.js](../src/async-import.js)
+#### 2.1. 异步加载模块
+##### 2.1.1 [async-import.js](../src/async-import.js)
 ```js
 setTimeout(() => {
   import("./export-commonjs").then((commonjs) => {
@@ -264,12 +264,12 @@ setTimeout(() => {
   });
 }, 10000);
 ```
-##### 2.2 [export-commonjs.js](../src/export-commonjs.js)
+##### 2.1.2 [export-commonjs.js](../src/export-commonjs.js)
 ```js
 exports.a = "commonjs_a";
 exports.b = "commonjs_b";
 ```
-##### 2.3 [bundle.js](../dist/async-import.bundle.js)
+##### 2.1.3 [bundle.js](../dist/async-import.bundle.js)
 ```js
 // 只展示编译后的参数(经过处理)
 {
@@ -285,7 +285,7 @@ exports.b = "commonjs_b";
   }
 ```
 
-##### 2.4 [异步bundle.js](../dist/0.bundle.js)
+##### 2.1.4 [异步bundle.js](../dist/0.bundle.js)
 ```js
 // 经过处理
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0], {
