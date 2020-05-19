@@ -24,7 +24,7 @@
         modules[moduleId] = moreModules[moduleId];
       }
     }
-    // push到window["webpackJsonp"]
+    // push到window["webpackJsonp"],同时触发push方法，往上追溯执行
     if (parentJsonpFunction) parentJsonpFunction(data);
 
     // 执行resolve
@@ -206,13 +206,16 @@
   // on error function for async loading
   __webpack_require__.oe = function (err) { console.error(err); throw err; };
 
+  // 全局对象window["webpackJsonp"]，用来存模块
   var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
   // oldJsonpFunction绑定jsonpArray的push
   var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
   // 替换数组方法
   jsonpArray.push = webpackJsonpCallback;
+  // 浅拷贝
   jsonpArray = jsonpArray.slice();
   for (var i = 0; i < jsonpArray.length; i++) {
+    // 合并window["webpackJsonp"]到modules，保证该modules拥有其他bundle文件的modules,避免重复加载
     webpackJsonpCallback(jsonpArray[i]);
   }
   var parentJsonpFunction = oldJsonpFunction;

@@ -28,7 +28,7 @@
         modules[moduleId] = moreModules[moduleId];
       }
     }
-    // push到window["webpackJsonp"]
+    // push到window["webpackJsonp"],同时触发push方法，往上追溯执行
     if (parentJsonpFunction) parentJsonpFunction(data);
 
     // 执行resolve
@@ -210,13 +210,16 @@
   // on error function for async loading
   __webpack_require__.oe = function (err) { console.error(err); throw err; };
 
+  // 全局对象window["webpackJsonp"]，用来存模块
   var jsonpArray = window["webpackJsonp"] = window["webpackJsonp"] || [];
   // oldJsonpFunction绑定jsonpArray的push
   var oldJsonpFunction = jsonpArray.push.bind(jsonpArray);
   // 替换数组方法
   jsonpArray.push = webpackJsonpCallback;
+  // 浅拷贝
   jsonpArray = jsonpArray.slice();
   for (var i = 0; i < jsonpArray.length; i++) {
+    // 合并window["webpackJsonp"]到modules，保证该modules拥有其他bundle文件的modules,避免重复加载
     webpackJsonpCallback(jsonpArray[i]);
   }
   var parentJsonpFunction = oldJsonpFunction;
@@ -288,6 +291,7 @@ exports.b = "commonjs_b";
 ##### 2.1.4 [异步bundle.js](../dist/0.bundle.js)
 ```js
 // 经过处理
+// push到window["webpackJsonp"]，对应bundle里面的window["webpackJsonp"]对象，避免不同文件重复加载"./src/export-commonjs.js"模块
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[0], {
   "./src/export-commonjs.js": (function (module, exports) {
     exports.a = "commonjs_a";
