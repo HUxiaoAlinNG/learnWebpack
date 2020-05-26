@@ -81,31 +81,36 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/import-es6-commonjs.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/sync-import/import-es6-commonjs.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/export-commonjs.js":
-/*!********************************!*\
-  !*** ./src/export-commonjs.js ***!
-  \********************************/
+/***/ "./src/export/export-commonjs.js":
+/*!***************************************!*\
+  !*** ./src/export/export-commonjs.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("exports.a = \"commonjs_a\";\nexports.b = \"commonjs_b\";\n\n//# sourceURL=webpack:///./src/export-commonjs.js?");
+exports.a = "commonjs_a";
+exports.b = "commonjs_b";
 
 /***/ }),
 
-/***/ "./src/import-es6-commonjs.js":
-/*!************************************!*\
-  !*** ./src/import-es6-commonjs.js ***!
-  \************************************/
+/***/ "./src/sync-import/import-es6-commonjs.js":
+/*!************************************************!*\
+  !*** ./src/sync-import/import-es6-commonjs.js ***!
+  \************************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _export_commonjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./export-commonjs */ \"./src/export-commonjs.js\");\n/* harmony import */ var _export_commonjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_export_commonjs__WEBPACK_IMPORTED_MODULE_0__);\n\nconsole.log(\"===es6导出commonjs===\", _export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a, _export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a.a, _export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a.b); // {a: \"commonjs_a\", b: \"commonjs_b\"} commonjs_a commonjs_b\n\n//# sourceURL=webpack:///./src/import-es6-commonjs.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _export_export_commonjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../export/export-commonjs */ "./src/export/export-commonjs.js");
+/* harmony import */ var _export_export_commonjs__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_export_export_commonjs__WEBPACK_IMPORTED_MODULE_0__);
+
+console.log("===es6导出commonjs===", _export_export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a, _export_export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a.a, _export_export_commonjs__WEBPACK_IMPORTED_MODULE_0___default.a.b); // {a: "commonjs_a", b: "commonjs_b"} commonjs_a commonjs_b
 
 /***/ })
 

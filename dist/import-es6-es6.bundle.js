@@ -81,32 +81,39 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/import-es6-es6.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/sync-import/import-es6-es6.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/export-es6.js":
-/*!***************************!*\
-  !*** ./src/export-es6.js ***!
-  \***************************/
+/***/ "./src/export/export-es6.js":
+/*!**********************************!*\
+  !*** ./src/export/export-es6.js ***!
+  \**********************************/
 /*! exports provided: default, b */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return b; });\nconst a = \"es6_a\";\n/* harmony default export */ __webpack_exports__[\"default\"] = (a);\nconst b = \"es6_b\";\n\n//# sourceURL=webpack:///./src/export-es6.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return b; });
+const a = "es6_a";
+/* harmony default export */ __webpack_exports__["default"] = (a);
+const b = "es6_b";
 
 /***/ }),
 
-/***/ "./src/import-es6-es6.js":
-/*!*******************************!*\
-  !*** ./src/import-es6-es6.js ***!
-  \*******************************/
+/***/ "./src/sync-import/import-es6-es6.js":
+/*!*******************************************!*\
+  !*** ./src/sync-import/import-es6-es6.js ***!
+  \*******************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _export_es6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./export-es6 */ \"./src/export-es6.js\");\n\nconsole.log(\"===es6导出es6===\", _export_es6__WEBPACK_IMPORTED_MODULE_0__[\"default\"], _export_es6__WEBPACK_IMPORTED_MODULE_0__[\"b\"]); // es6_a es6_b\n\n//# sourceURL=webpack:///./src/import-es6-es6.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _export_export_es6__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../export/export-es6 */ "./src/export/export-es6.js");
+
+console.log("===es6导出es6===", _export_export_es6__WEBPACK_IMPORTED_MODULE_0__["default"], _export_export_es6__WEBPACK_IMPORTED_MODULE_0__["b"]); // es6_a es6_b
 
 /***/ })
 

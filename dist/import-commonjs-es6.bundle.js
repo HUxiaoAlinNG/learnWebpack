@@ -81,31 +81,36 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/import-commonjs-es6.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/sync-import/import-commonjs-es6.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/export-es6.js":
-/*!***************************!*\
-  !*** ./src/export-es6.js ***!
-  \***************************/
+/***/ "./src/export/export-es6.js":
+/*!**********************************!*\
+  !*** ./src/export/export-es6.js ***!
+  \**********************************/
 /*! exports provided: default, b */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"b\", function() { return b; });\nconst a = \"es6_a\";\n/* harmony default export */ __webpack_exports__[\"default\"] = (a);\nconst b = \"es6_b\";\n\n//# sourceURL=webpack:///./src/export-es6.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return b; });
+const a = "es6_a";
+/* harmony default export */ __webpack_exports__["default"] = (a);
+const b = "es6_b";
 
 /***/ }),
 
-/***/ "./src/import-commonjs-es6.js":
-/*!************************************!*\
-  !*** ./src/import-commonjs-es6.js ***!
-  \************************************/
+/***/ "./src/sync-import/import-commonjs-es6.js":
+/*!************************************************!*\
+  !*** ./src/sync-import/import-commonjs-es6.js ***!
+  \************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const es6 = __webpack_require__(/*! ./export-es6 */ \"./src/export-es6.js\");\nconsole.log(\"===commonjs导出es6===\", es6, es6.a, es6.b); // Module:{ b: \"es6_b\", default: \"es6_a\", Symbol(Symbol.toStringTag): \"Module\" ,__esModule: true } undefined es6_b\n\n//# sourceURL=webpack:///./src/import-commonjs-es6.js?");
+const es6 = __webpack_require__(/*! ../export/export-es6 */ "./src/export/export-es6.js");
+console.log("===commonjs导出es6===", es6, es6.a, es6.b); // Module:{ b: "es6_b", default: "es6_a", Symbol(Symbol.toStringTag): "Module" ,__esModule: true } undefined es6_b
 
 /***/ })
 

@@ -196,19 +196,23 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/async-import.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/async-import/async-import.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/async-import.js":
-/*!*****************************!*\
-  !*** ./src/async-import.js ***!
-  \*****************************/
+/***/ "./src/async-import/async-import.js":
+/*!******************************************!*\
+  !*** ./src/async-import/async-import.js ***!
+  \******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("setTimeout(() => {\n  __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! ./export-commonjs */ \"./src/export-commonjs.js\", 7)).then((commonjs) => {\n    console.log(\"===异步导出commonjs===\", commonjs, commonjs.a, commonjs.b); // Module:{ b: \"commonjs_b\", default: \"commonjs_a\", Symbol(Symbol.toStringTag): \"Module\" ,__esModule: true } commonjs_a commonjs_b\n  });\n}, 10000);\n\n//# sourceURL=webpack:///./src/async-import.js?");
+setTimeout(() => {
+  __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.t.bind(null, /*! ../export/export-commonjs */ "./src/export/export-commonjs.js", 7)).then((commonjs) => {
+    console.log("===异步导出commonjs===", commonjs, commonjs.a, commonjs.b); // Module:{ b: "commonjs_b", default: "commonjs_a", Symbol(Symbol.toStringTag): "Module" ,__esModule: true } commonjs_a commonjs_b
+  });
+}, 10000);
 
 /***/ })
 
