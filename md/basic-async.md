@@ -259,7 +259,7 @@ module.exports = {
 ```
 
 #### 2.1. 异步加载模块
-##### 2.1.1 [async-import.js](../src/async-import.js)
+##### 2.1.1 [async-import.js](../src/async-import/async-import.js)
 ```js
 setTimeout(() => {
   import("./export-commonjs").then((commonjs) => {
@@ -267,7 +267,7 @@ setTimeout(() => {
   });
 }, 10000);
 ```
-##### 2.1.2 [export-commonjs.js](../src/export-commonjs.js)
+##### 2.1.2 [export-commonjs.js](../src/export/export-commonjs.js)
 ```js
 exports.a = "commonjs_a";
 exports.b = "commonjs_b";

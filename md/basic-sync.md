@@ -135,13 +135,13 @@ module.exports = {
 ### 4种加载方式
 
 #### 1.1.commonJS加载commonJS模块
-##### 1.1.1 [import-commonjs-commonjs.js](../src/import-commonjs-commonjs.js)
+##### 1.1.1 [import-commonjs-commonjs.js](../src/sync-import/import-commonjs-commonjs.js)
 ```js
 const commonjs = require("./export-commonjs");
 // 输出 {a: "commonjs_a", b: "commonjs_b"} commonjs_a commonjs_b
 console.log("===commonjs导出commonjs===", commonjs, commonjs.a, commonjs.b); 
 ```
-##### 1.1.2 [export-commonjs.js](../src/export-commonjs.js)
+##### 1.1.2 [export-commonjs.js](../src/export/export-commonjs.js)
 ```js
 exports.a = "commonjs_a";
 exports.b = "commonjs_b";
@@ -162,13 +162,13 @@ exports.b = "commonjs_b";
 ```
 
 #### 1.2.commonJS加载ES6模块
-##### 1.2.1 [import-commonjs-es6.js](../src/import-commonjs-es6.js)
+##### 1.2.1 [import-commonjs-es6.js](../src/sync-import/import-commonjs-es6.js)
 ```js
 const es6 = require("./export-es6");
 // 输出 Module:{ b: "es6_b", default: "es6_a", Symbol(Symbol.toStringTag): "Module" ,__esModule: true } undefined es6_b
 console.log("===commonjs导出es6===", es6, es6.a, es6.b);
 ```
-##### 1.2.2 [export-es6.js](../src/export-es6.js)
+##### 1.2.2 [export-es6.js](../src/export/export-es6.js)
 ```js
 const a = "es6_a";
 export default a;
@@ -193,12 +193,12 @@ export const b = "es6_b";
 ```
 
 #### 1.3.ES6加载ES6模块
-##### 1.3.1 [import-es6-es6.js](../src/import-es6-es6.js)
+##### 1.3.1 [import-es6-es6.js](../src/sync-import/import-es6-es6.js)
 ```js
 import a, { b } from "./export-es6";
 console.log("===es6导出es6===", a, b);
 ```
-##### 1.3.2 [export-es6.js](../src/export-es6.js)
+##### 1.3.2 [export-es6.js](../src/export/export-es6.js)
 ```js
 const a = "es6_a";
 export default a;
@@ -224,12 +224,12 @@ export const b = "es6_b";
 ```
 
 #### 1.4.ES6加载commonJS模块
-##### 1.4.1 [import-es6-commonjs.js](../src/import-es6-commonjs.js)
+##### 1.4.1 [import-es6-commonjs.js](../src/sync-import/import-es6-commonjs.js)
 ```js
 import commonjs from "./export-commonjs";
 console.log("===es6导出commonjs===", commonjs, commonjs.a, commonjs.b); 
 ```
-##### 1.4.2 [export-commonjs.js](../src/export-commonjs.js)
+##### 1.4.2 [export-commonjs.js](../src/export/export-commonjs.js)
 ```js
 exports.a = "commonjs_a";
 exports.b = "commonjs_b";
