@@ -25,7 +25,7 @@ syncHook.tap("3", (name, course) => {
   console.log("syncHook 3", name, course);
   return 3;
 });
-syncHook.call("hxl", "tapable");
+// syncHook.call("hxl", "tapable");
 
 /* 
 保险同步钩子，只要监听函数中有返回值（除了undefined），结束事件
@@ -46,7 +46,7 @@ syncBailHook.tap("3", (name, course) => {
   console.log("syncBailHook 3", name, course);
   return 3;
 });
-syncBailHook.call("hxl", "tapable");
+// syncBailHook.call("hxl", "tapable");
 
 /* 
 瀑布流同步钩子，只要监听函数中有返回值（除了undefined），该返回值会作为下一个监听函数的参数，下一监听函数没有返回值的话，返回值会层层传递
@@ -73,7 +73,7 @@ syncWaterfallHook.tap("4", (name, course) => {
   console.log("syncWaterfallHook 4", name, course);
   return;
 });
-syncWaterfallHook.call("hxl", "tapable");
+// syncWaterfallHook.call("hxl", "tapable");
 
 /* 
 循环同步钩子，不断循环执行直到监听函数的返回值不为undefined，且每次循环都是从头开始执行
