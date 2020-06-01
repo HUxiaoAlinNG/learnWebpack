@@ -1,0 +1,27 @@
+@startuml
+
+database Output
+
+rectangle Loader1 {
+  usecase "loader1" as loader1
+  usecase "pitch1" as pitch1
+}
+rectangle Loader2 {
+  usecase "loader2" as loader2
+  usecase "pitch2" as pitch2
+}
+rectangle Loader3 {
+  usecase "loader3" as loader3
+  usecase "pitch3" as pitch3
+}
+database Source
+
+pitch1 --> pitch2
+pitch2 --> pitch3
+pitch3 --> Source
+
+Source --> loader1
+loader1 --> loader2
+loader2 --> loader3
+loader3 --> Output
+@enduml
