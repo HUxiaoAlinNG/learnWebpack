@@ -23,21 +23,40 @@ module.exports = {
   mode: "development",
   module: {
     rules: [
+      // {
+      //   test: /\.js$/,
+      //   use: [
+      // {
+      //   loader: "babel-loader",
+      //   options: {
+      //     presets: ["@babel/preset-env", "@babel/preset-react"]
+      //   }
+      // },
       {
-        test: /\.js$/,
-        use: [
-          // {
-          //   loader: "babel-loader",
-          //   options: {
-          //     presets: ["@babel/preset-env", "@babel/preset-react"]
-          //   }
-          // },
-          // {
-          //   loader: "hxl-loader"
-          // }
-          "loader3", "loader2", "loader1"
-        ]
+        loader: "hxl-loader"
       }
+      // "loader3", "loader2", {
+      //   loader: "loader1",
+      //   options: {
+      //     presets: ["@babel/preset-env", "@babel/preset-react"]
+      //   }
+      // }
+      //   ]
+      // }
+      // {
+      //   test: /\.js$/,
+      //   use: ["normal-loader1", "normal-loader2"]
+      // },
+      // {
+      //   test: /\.js$/,
+      //   enforce: "pre",
+      //   use: ["pre-loader1", "pre-loader2"]
+      // },
+      // {
+      //   test: /\.js$/,
+      //   enforce: "post",
+      //   use: ["post-loader1", "post-loader2"]
+      // }
     ]
   },
   // 自定义loader，从"src/loader/hxl-loader"路径查找hxl-loader
@@ -48,6 +67,6 @@ module.exports = {
     //   "hxl-loader": path.resolve(__dirname, "src", "loader", "hxl-loader")
     // },
     // 针对大量的loader
-    modules: [path.resolve(__dirname, "src", "loader"), "node_modules"]
+    modules: [path.resolve(__dirname, "src", "loader"), path.resolve(__dirname, "src", "loader", "normal"), path.resolve(__dirname, "src", "loader", "type"), "node_modules"]
   }
 }

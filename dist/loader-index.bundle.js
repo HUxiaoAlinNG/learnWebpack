@@ -90,10 +90,29 @@
 /*!*****************************!*\
   !*** ./src/loader/index.js ***!
   \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var inline_loader1_inline_loader2_modules_index1_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! inline-loader1!inline-loader2?modules!./index1.js */ "./src/loader/type/inline-loader1.js!./src/loader/type/inline-loader2.js?modules!./src/loader/index1.js");
+/* harmony import */ var inline_loader1_inline_loader2_modules_index1_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(inline_loader1_inline_loader2_modules_index1_js__WEBPACK_IMPORTED_MODULE_0__);
+
+
+const a = () => {
+  console.log(inline_loader1_inline_loader2_modules_index1_js__WEBPACK_IMPORTED_MODULE_0___default.a);
+}; // const b = <h1>b</h1>
+
+/***/ }),
+
+/***/ "./src/loader/type/inline-loader1.js!./src/loader/type/inline-loader2.js?modules!./src/loader/index1.js":
+/*!**************************************************************************************************************!*\
+  !*** ./src/loader/type/inline-loader1.js!./src/loader/type/inline-loader2.js?modules!./src/loader/index1.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-loader1// loader2// loader3
+module.exports = "hxl";// inline-loader2// inline-loader1
 
 /***/ })
 
