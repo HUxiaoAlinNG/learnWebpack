@@ -7,6 +7,15 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "transform",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/src/ast/transform-class2.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "SyncHook",
       "skipFiles": [
         "<node_internals>/**"
