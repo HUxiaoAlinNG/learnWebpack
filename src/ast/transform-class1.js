@@ -98,4 +98,13 @@ estraverse.traverse(ast, {
 });
 // 重新生成代码
 let generated = escodegen.generate(ast);
-console.log("===generate===", generated);  // ===generate=== const AST = 'ABSTRACT SYNTAX TREE';
+console.log(generated);  
+/*
+转译后代码：
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.getName = function Person() {
+  return this.name;
+}
+*/
