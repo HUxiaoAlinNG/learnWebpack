@@ -97,8 +97,8 @@ estraverse.traverse(ast, {
   }
 });
 // 重新生成代码
-let generated = escodegen.generate(ast);
-console.log(generated);  
+const res = escodegen.generate(ast);
+console.log(res);  
 /*
 转译后代码：
 function Person(name) {
