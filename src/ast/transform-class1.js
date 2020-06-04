@@ -61,8 +61,7 @@ estraverse.traverse(ast, {
                 object: {
                   type: "MemberExpression",
                   object: {
-                    type: id.type,
-                    name: id.name,
+                    ...id,
                   },
                   property: {
                     type: "Identifier",
@@ -70,8 +69,7 @@ estraverse.traverse(ast, {
                   }
                 },
                 property: {
-                  type: methodDefinition.key.type,
-                  name: methodDefinition.key.name
+                  ...methodDefinition.key
                 },
                 computed: false,
               },
