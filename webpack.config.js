@@ -1,4 +1,5 @@
 const path = require("path");
+const ExamplePlugin = require("./src/plugins/example-plugins");
 
 module.exports = {
   entry: {
@@ -13,7 +14,8 @@ module.exports = {
     // // 异步导出commonjs
     // "async-import": "./src/async-import/async-import.js",
     // loader
-    "loader-index": "./src/loader/index.js",
+    // "loader-index": "./src/loader/index.js",
+    "index": "./src/index.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -26,21 +28,25 @@ module.exports = {
       // {
       //   test: /\.js$/,
       //   use: [
-      // {
-      //   loader: "babel-loader",
-      //   options: {
-      //     presets: ["@babel/preset-env", "@babel/preset-react"]
-      //   }
-      // },
-      {
-        loader: "hxl-loader"
-      }
-      // "loader3", "loader2", {
-      //   loader: "loader1",
-      //   options: {
-      //     presets: ["@babel/preset-env", "@babel/preset-react"]
-      //   }
+      //     {
+      //       loader: "babel-loader",
+      //       options: {
+      //         presets: ["@babel/preset-env", "@babel/preset-react"]
+      //       }
+      //     },
+      //   ]
       // }
+      // {
+      //   loader: "hxl-loader"
+      // }
+      { loader: "loader3" },
+      { loader: "loader2" },
+      {
+        loader: "loader1",
+        options: {
+          presets: ["@babel/preset-env", "@babel/preset-react"]
+        }
+      }
       //   ]
       // }
       // {
@@ -68,5 +74,6 @@ module.exports = {
     // },
     // 针对大量的loader
     modules: [path.resolve(__dirname, "src", "loader"), path.resolve(__dirname, "src", "loader", "normal"), path.resolve(__dirname, "src", "loader", "type"), "node_modules"]
-  }
+  },
+  plugins: [new ExamplePlugin({ "test": "test ExamplePlugin" })]
 }

@@ -57,6 +57,18 @@
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}/src/tapable/example-sync.js"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "cli",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "args": [
+        "--mode=development"
+      ],
+      "program": "${workspaceFolder}/src/compile-process/index.js"
     }
   ]
 }
