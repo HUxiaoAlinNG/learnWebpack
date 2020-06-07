@@ -61,8 +61,7 @@ estraverse.traverse(ast, {
                 object: {
                   type: "MemberExpression",
                   object: {
-                    type: id.type,
-                    name: id.name,
+                    ...id,
                   },
                   property: {
                     type: "Identifier",
@@ -70,8 +69,7 @@ estraverse.traverse(ast, {
                   }
                 },
                 property: {
-                  type: methodDefinition.key.type,
-                  name: methodDefinition.key.name
+                  ...methodDefinition.key
                 },
                 computed: false,
               },
@@ -97,5 +95,14 @@ estraverse.traverse(ast, {
   }
 });
 // 重新生成代码
-let generated = escodegen.generate(ast);
-console.log("===generate===", generated);  // ===generate=== const AST = 'ABSTRACT SYNTAX TREE';
+const res = escodegen.generate(ast);
+console.log(res);  
+/*
+转译后代码：
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.getName = function Person() {
+  return this.name;
+}
+*/
